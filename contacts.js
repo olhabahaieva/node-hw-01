@@ -20,7 +20,7 @@ async function getContactById(contactId) {
   if (!dataId) {
     return null;
   }
-
+   return dataId;
 }
 
 async function removeContact(contactId) {
