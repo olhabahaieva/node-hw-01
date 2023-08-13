@@ -52,21 +52,6 @@ async function addContact({name, email, phone}) {
   return newContact;
 }
 
-// async function addContact(name, email, phone) {
-//   const data = await listContacts();
-//   const newContact = {
-//     id: crypto.randomUUID(), 
-//     name,
-//     email,
-//     phone,
-//   };
-
-//   const newContacts = [...data, newContact];
-//   await writeContacts(newContacts);
-
-//   return newContact;
-// }
-
 async function writeContacts(contacts) {
   await fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
 }
