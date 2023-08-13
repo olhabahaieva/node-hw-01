@@ -28,7 +28,7 @@ async function removeContact(contactId) {
   const index = data.findIndex((contact) => contact.id === contactId);
 
   if (index === -1) {
-    return undefined;
+    return null;
   }
 
   const newContacts = [...data.slice(0, index), ...data.slice(index + 1)];
